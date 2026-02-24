@@ -1,6 +1,3 @@
-/* ============================================
-   RESET & BASE STYLES
-   ============================================ */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -16,6 +14,7 @@ body {
     color: #334155;
     background-color: #ffffff;
     line-height: 1.7;
+    overflow-x: hidden;
 }
 
 img {
@@ -32,9 +31,6 @@ ul {
     list-style: none;
 }
 
-/* ============================================
-   REUSABLE LAYOUT
-   ============================================ */
 .container {
     width: 90%;
     max-width: 1100px;
@@ -57,9 +53,6 @@ ul {
     margin-bottom: 40px;
 }
 
-/* ============================================
-   HEADER & NAV  (Flexbox)
-   ============================================ */
 .site-header {
     background-color: #0f172a;
     color: #ffffff;
@@ -109,9 +102,6 @@ ul {
     color: #ffffff;
 }
 
-/* ============================================
-   ABOUT SECTION  (Flexbox)
-   ============================================ */
 .about-content {
     display: flex;
     align-items: flex-start;
@@ -131,9 +121,6 @@ ul {
     font-size: 1.05rem;
 }
 
-/*
-   CARD GRID  (CSS Grid — Skills & Projects)
- */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -168,9 +155,6 @@ ul {
     color: #2563eb;
 }
 
-/* ============================================
-   CONTACT FORM
-   ============================================ */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -231,13 +215,97 @@ ul {
     background-color: #1d4ed8;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
 .site-footer {
     background-color: #0f172a;
     color: #94a3b8;
     text-align: center;
     padding: 28px 20px;
     font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2.2rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 32px;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .about-content {
+        gap: 28px;
+    }
+
+    .contact-form {
+        padding: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .nav-list a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .section {
+        padding: 48px 0;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 28px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 24px 20px;
+    }
+
+    .contact-form {
+        padding: 24px 20px;
+    }
+
+    .submit-btn {
+        padding: 12px 24px;
+    }
 }
